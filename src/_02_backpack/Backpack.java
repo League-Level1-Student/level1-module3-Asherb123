@@ -1,11 +1,13 @@
+
+
 package _02_backpack;
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 1
  */
 
-public class Backpack {
-	private Pencil pencil;
+public class Backpack<MorningPoo, Morningpoo> {
+	private Morningpoo morningpoo;
 	private Ruler ruler;
 	private Textbook textbook;
 
@@ -13,16 +15,37 @@ public class Backpack {
 		// Your mission is to go to school.
 		// 1. First you need to put all your supplies into your backpack - use
 		// the putInBackpack(...) methods
-
+Morningpoo morningpoo=new Morningpoo();
+Ruler ruler = new Ruler();
+Textbook textbook = new Textbook();
+		putInBackpack(morningpoo);
+		putInBackpack(ruler);
+		putInBackpack(textbook);
+		
+		
+		
 		goToSchool();
+	
+	
+	
+	
+	
 	}
 
 
 
-	public void putInBackpack(Pencil supply) {
-		this.pencil = supply;
-		log(supply);
+	public void putInBackpack(Morningpoo morningpoo2) {
+		this.morningpoo = morningpoo2;
+		log(morningpoo2);
 	}
+
+
+	private void log(Morningpoo morningpoo2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 
 	public void putInBackpack(Ruler supply) {
 		this.ruler = supply;
@@ -46,7 +69,7 @@ public class Backpack {
 	}
 
 	public void goToSchool() {
-		if (pencil == null || ruler == null || textbook == null) {
+		if (morningpoo == null || ruler == null || textbook == null) {
 			System.out.println("ERROR: You are not ready for School!");
 		} else {
 			System.out.println("Congratulations! You are ready for school");
@@ -58,10 +81,10 @@ abstract class Supply {
 	protected String name;
 }
 
-class Pencil extends Supply {
-	Pencil() {
-		this.name = "pencil";
-		System.out.println("You got your pencil!");
+class Morningpoo extends Supply {
+	Morningpoo() {
+		this.name = "morning poo";
+		System.out.println("You got your poo!");
 	}
 
 	public void write(String writing) {
